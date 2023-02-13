@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func helloButtonTapped(_ sender: Any) {
-        nameLabel.text = nameTextfield.text
+        nameLabel.text = "Hello! " + nameTextfield.text
     }
     
     // MARK: - Lifecycle

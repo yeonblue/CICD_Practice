@@ -16,20 +16,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgv-2I-cdK">
-                                <rect key="frame" x="147.66666666666666" y="415.66666666666669" width="98" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="CDF-v7-GO9">
+                                <rect key="frame" x="0.0" y="59.000000000000007" width="393" height="120.66666666666669"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m7g-SN-OOt">
+                                        <rect key="frame" x="32" y="0.0" width="329" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABs-eI-3Mu">
+                                        <rect key="frame" x="159" y="50" width="75" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="helloButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="npm-u9-VHc"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgv-2I-cdK">
+                                        <rect key="frame" x="148" y="100.33333333333334" width="97.333333333333314" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="m7g-SN-OOt" secondAttribute="trailing" constant="32" id="Jv1-z1-e7b"/>
+                                    <constraint firstItem="m7g-SN-OOt" firstAttribute="leading" secondItem="CDF-v7-GO9" secondAttribute="leading" constant="32" id="xSL-Ra-Cgj"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Tgv-2I-cdK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="65Q-Rg-YJB"/>
-                            <constraint firstItem="Tgv-2I-cdK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="N9C-w5-zuS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CDF-v7-GO9" secondAttribute="trailing" id="Z0m-sa-PvQ"/>
+                            <constraint firstItem="CDF-v7-GO9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sKc-bD-utu"/>
+                            <constraint firstItem="CDF-v7-GO9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yq6-cb-ywC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="Tgv-2I-cdK" id="EkH-KF-xXy"/>
+                        <outlet property="nameTextfield" destination="m7g-SN-OOt" id="O50-s9-Xm9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
